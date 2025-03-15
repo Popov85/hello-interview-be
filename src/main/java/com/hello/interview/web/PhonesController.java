@@ -40,21 +40,13 @@ public class PhonesController {
         return ResponseEntity.ok(phonesMapper.toResponse(phoneService.getPhoneById(id)));
     }
 
-    // 📌 3. Create a new phone
+    // 📌 3. Save a new phone
     @PostMapping
-    public ResponseEntity<PhoneResponse> createPhone(@RequestBody PhoneRequest request) {
-        log.debug("Creating a phone = {}", request);
+    public ResponseEntity<PhoneResponse> savePhone(@RequestBody PhoneRequest request) {
+        log.debug("Saved a phone = {}", request);
         return ResponseEntity
-                .status(HttpStatus.CREATED)
+                .status(HttpStatus.OK)
                 .body(phonesMapper.toResponse(phoneService.savePhone(phonesMapper.toDomain(request))));
-    }
-
-    // 📌 4. Update an existing phone
-    @PutMapping("/{id}")
-    public ResponseEntity<PhoneResponse> updatePhone(@PathVariable Long id, @RequestBody PhoneRequest request) {
-        log.debug("Updating phone ID= {}", id);
-        return ResponseEntity
-                .ok(phonesMapper.toResponse(phoneService.savePhone(phonesMapper.toDomain(request))));
     }
 
     // 📌 5. Delete a phone by ID

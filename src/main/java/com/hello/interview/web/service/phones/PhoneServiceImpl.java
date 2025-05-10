@@ -1,4 +1,4 @@
-package com.hello.interview.web.service;
+package com.hello.interview.web.service.phones;
 
 import com.hello.interview.web.dto.Phone;
 import com.hello.interview.web.mapper.PhonesMapper;

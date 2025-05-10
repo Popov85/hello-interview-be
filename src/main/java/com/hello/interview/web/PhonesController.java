@@ -4,7 +4,7 @@ import com.hello.interview.web.dto.Phone;
 import com.hello.interview.web.dto.PhoneRequest;
 import com.hello.interview.web.dto.PhoneResponse;
 import com.hello.interview.web.mapper.PhonesMapper;
-import com.hello.interview.web.service.PhoneService;
+import com.hello.interview.web.service.phones.PhoneService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;

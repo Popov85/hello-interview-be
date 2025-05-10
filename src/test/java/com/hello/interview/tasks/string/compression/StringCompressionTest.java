@@ -1,4 +1,4 @@
-package com.hello.interview.tasks.string;
+package com.hello.interview.tasks.string.compression;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -27,7 +27,7 @@ class StringCompressionTest {
     @ParameterizedTest
     @MethodSource("testCases")
     void testCompress(String input, String expected) {
-        StringCompression sc = new StringCompression();
+        StringCompressionInPlaceImpl sc = new StringCompressionInPlaceImpl();
         char[] chars = input.toCharArray();
         int newLength = sc.compress(chars);
         String actual = new String(chars, 0, newLength);

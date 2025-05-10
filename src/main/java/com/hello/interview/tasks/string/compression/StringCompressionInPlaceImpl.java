@@ -1,11 +1,12 @@
-package com.hello.interview.tasks.string;
+package com.hello.interview.tasks.string.compression;
 
 /**
  * MEDIUM
  * https://leetcode.com/problems/string-compression
  */
-public class StringCompression {
+public class StringCompressionInPlaceImpl implements StringCompression {
 
+    @Override
     public int compress(char[] chars) {
 
         int nextIndex = 1;
